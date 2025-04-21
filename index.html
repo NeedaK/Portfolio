@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Update Title -->
+    <title>Anita Kraus - Computer Science Portfolio</title> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Source+Code+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <!-- Update Branding - Use Initials or Full Name -->
+                <a href="#" class="nav-branding">A.L.K</a> 
+                <ul class="nav-menu">
+                    <!-- These links correspond to section IDs -->
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-content">
+                <!-- Update Name -->
+                <h1>Hi, I'm Anita Kraus</h1> 
+                <!-- Update Subtitle using Qualification Summary/Goals -->
+                <p class="subtitle">Computer Science Student | Web Development & IT Enthusiast</p> 
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <!-- Optional: Add a profile picture here -->
+                <!-- <img src="images/anita-kraus.jpg" alt="Anita Kraus" class="profile-pic"> -->
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="content-section">
+            <div class="container">
+                <h2>About Me</h2>
+                <!-- Use content from Resume: Qualification Summary & Career Goals -->
+                <p>
+                    I am a results-driven Computer Science student at Hannibal-LaGrange University with a strong foundation in networking, system management, and web development. As a dedicated college softball athlete, I bring discipline, teamwork, and a quality-focused approach to solving complex technical challenges. 
+                </p>
+                <p>
+                    Passionate about web development and continuously expanding my technical skills, I thrive in collaborative environments. My goal is to leverage my technical expertise and problem-solving abilities within a supportive and driven team, contributing to innovative projects while growing professionally. I'm eager to apply my skills in a dynamic organization where I can learn and make a meaningful impact.
+                </p>
+                 <!-- Optional: Add a sentence about HLGU or specific interests -->
+                 <p>
+                    My studies at HLGU and hands-on project work have allowed me to explore diverse areas like cybersecurity, database management, and full-stack development. I particularly enjoy creating user-friendly interfaces and optimizing system performance.
+                 </p>
+            </div>
+        </section>
+
+        <!-- Experience Section (Added) -->
+        <section id="experience" class="content-section bg-light">
+             <div class="container">
+                <h2>Professional Experience</h2>
+                <!-- Add Internship Details from Resume -->
+                <div class="experience-item">
+                    <h3>Intern - Help Desk</h3>
+                    <p><strong>Hannibal-LaGrange University IT Office</strong> | August 2024 – December 2024</p>
+                    <ul>
+                        <li>Provided technical troubleshooting for staff and students, addressing password resets, printer issues, and hardware evaluations (120+ hours).</li>
+                        <li>Worked on camera and cable systems: diagnosed Ethernet connectivity, learned Power over Ethernet (PoE) maintenance, and collaborated on campus cabling assessments.</li>
+                        <li>Supported IT infrastructure by replacing faulty surge protectors, assisting with network switch firmware updates, and investigating ID scanner COM port configurations.</li>
+                        <li>Gained experience in Group Policy management within a domain environment.</li>
+                        <li>Managed the university's physical key system, including categorization and tracking using QR codes/Excel.</li>
+                        <li>Developed HLGU's internal SharePoint site: created a front page, designed departmental templates, and presented on "Network Automation" during a Lunch and Learn session.</li>
+                        <li>Handled call support and walk-ins, resolving login issues, software setups, and general IT problems using tools like Mitel Connect.</li>
+                    </ul>
+                </div>
+                 <div class="experience-item">
+                    <h3>Intern – IT Department</h3>
+                    <p><strong>Lou Fusz Automotive Network</strong> | May 2023 - August 2023</p>
+                    <ul>
+                        <li>Designed and managed web pages for various automotive brands, focusing on improving customer usability and site aesthetics.</li>
+                        <li>Created engaging and user-friendly sites, contributing to site productivity and positive customer interaction.</li>
+                    </ul>
+                </div>
+                 <div class="experience-item">
+                    <h3>IT Intern</h3>
+                    <p><strong>Lanter Delivery Systems, LLC</strong> | June 2022 - July 2022</p>
+                    <ul>
+                        <li>Supported the IT team by developing research material for implementation in key projects.</li>
+                    </ul>
+                </div>
+                <!-- Add Volunteer/Other Experience if desired -->
+             </div>
+        </section>
+
+
+        <!-- Projects Section -->
+        <section id="projects" class="content-section">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="project-grid">
+
+                    <!-- Project 1: HNB Customer Dispute Form -->
+                    <div class="project-card">
+                        <h3>HNB Customer Dispute Form System</h3>
+                        <p>Designed and developed a user-friendly, multi-section debit card dispute form for HNB Bank using HTML, CSS, and JavaScript for the frontend. Implemented conditional logic and data validation to enhance user experience and data accuracy. Developed a PHP backend (Save.php) for input validation/sanitization, optional file uploads, and emailing submissions using PHPMailer. Tested locally with XAMPP, emphasizing security best practices like input sanitization and credential management.</p>
+                        <div class="project-links">
+                             <a href="https://needak.github.io/HNB-Bank/" target="_blank" class="btn btn-secondary">Live Site</a>
+                             <a href="https://github.com/NeedaK/HNB-Bank.git" target="_blank" class="btn btn-secondary">Source Code</a>
+                        </div>
+                        <p class="tech-stack">Tech: HTML, CSS, JavaScript, PHP, PHPMailer, XAMPP, Git</p>
+                    </div>
+
+                    <!-- Project 2: HLGU Website Redesign -->
+                    <div class="project-card">
+                        <h3>HLGU Website Redesign</h3>
+                        <p>Created a modern, responsive website prototype for Hannibal-LaGrange University from scratch using HTML and external CSS. Focused on clean design, accessibility, performance, and mobile-first responsiveness with touch-friendly menus. Hosted the site on GitHub Pages. Developed a companion SharePoint site for CS major resources. Gained experience in front-end best practices and designing for real users in an academic setting.</p>
+                        <div class="project-links">
+                            <a href="https://needak.github.io/HLG/" target="_blank" class="btn btn-secondary">Live Site</a>
+                            <a href="https://github.com/NeedaK/HLG.git" target="_blank" class="btn btn-secondary">Source Code</a>
+                        </div>
+                        <p class="tech-stack">Tech: HTML, CSS, Git, GitHub Pages, SharePoint</p>
+                    </div>
+                    
+                    <!-- Project 3: Ethical Hacking & Pen Testing -->
+                     <div class="project-card">
+                        <h3>Ethical Hacking & Penetration Testing</h3>
+                        <p>Completed comprehensive ethical hacking coursework and gained hands-on penetration testing experience using Metasploit, Nmap, Burp Suite, and ProxyChains. Deployed and exploited vulnerable machines (DVWA on Metasploitable 2/3 via Vagrant). Performed web attacks (Command Injection, SQLi, File Upload Exploit, Stored XSS) and network reconnaissance/scanning (scanme.nmap.org, google.com). Presented on reconnaissance strategies and explored ethical considerations in cybersecurity.</p>
+                         <div class="project-links">
+                            <a href="Ethical Hacking & Penetration Testing Lab Report.pdf" target="_blank" class="btn btn-secondary">View Report</a>
+                        </div>
+                        <p class="tech-stack">Tech: Metasploit, Nmap, Burp Suite, ProxyChains, DVWA, Linux, Virtualization, Networking</p>
+                    </div>
+
+                     <!-- Project 4: VEX Robotics -->
+                     <div class="project-card">
+                        <h3>VEX Robotics - Striker Bot</h3>
+                        <img src="V5.jpg" alt="Anita and classmate building a VEX robot in a classroom" class="project-thumb">
+                        <p>Successfully built the "Striker" VEX robot. Programmed robot behavior using VEXcode (or specify C++/Python if known) to control drive movements (forward, backward, turn) and motor actions (pick up/drop objects). Explored reacting to sensor input (e.g., bump switch) and programming autonomous routines, applying fundamental coding concepts like variables, loops, conditionals, and functions in a robotics context.</p>
+                         <div class="project-links">
+                        </div>
+                        <p class="tech-stack">Tech: VEX Robotics, VEXcode (C++/Python/Blocks), Robotics Principles</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="content-section bg-light"> 
+            <div class="container">
+                <h2>Skills</h2>
+                <!-- Use Skills from Resume & Course/Project Details -->
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Languages</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>JavaScript</li>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>PHP</li>
+                            <li>SQL</li>
+                            <li>C++ (Exposure via VEX)</li>
+                        </ul>
+                    </div>
+                     <div class="skill-category">
+                        <h3>Web Technologies</h3>
+                        <ul>
+                            <li>Frontend Dev (HTML/CSS/JS)</li>
+                            <li>Backend Dev (PHP)</li>
+                            <li>Responsive Design</li>
+                            <li>Web Hosting (GitHub Pages)</li>
+                            <li>XAMPP (Local Server)</li>
+                            <li>Data Validation/Sanitization</li>
+                         </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>IT & Systems</h3>
+                        <ul>
+                            <li>Hardware Troubleshooting</li>
+                            <li>Operating Systems (Windows, Linux)</li>
+                            <li>Networking Concepts (TCP/IP, OSI)</li>
+                            <li>Network Topologies/Hardware</li>
+                            <li>Power over Ethernet (PoE)</li>
+                            <li>Virtualization</li>
+                            <li>Microsoft Office Suite</li>
+                            <li>SharePoint Development</li>
+                            <li>Group Policy Management</li>
+                         </ul>
+                    </div>
+                     <div class="skill-category">
+                        <h3>Security</h3>
+                        <ul>
+                            <li>Ethical Hacking Principles</li>
+                            <li>Penetration Testing Tools (Metasploit, Nmap, Burp Suite)</li>
+                            <li>Vulnerability Assessment</li>
+                            <li>Web Application Security (SQLi, XSS, etc.)</li>
+                            <li>Network Reconnaissance</li>
+                            <li>Security Best Practices</li>
+                            <li>Cryptography (Basic Concepts)</li>
+                         </ul>
+                    </div>
+                     <div class="skill-category">
+                        <h3>Tools & Platforms</h3>
+                        <ul>
+                            <li>Git & GitHub</li>
+                            <li>Visual Studio / VS Code</li>
+                            <li>Adobe Creative Suite (Illustrator, Photoshop, InDesign, Animate)</li>
+                            <li>Mitel Connect</li>
+                            <li>VEX Robotics Platform</li>
+                            <li>Excel (Data Tracking)</li>
+                         </ul>
+                    </div>
+                     <div class="skill-category">
+                        <h3>Concepts & Soft Skills</h3>
+                        <ul>
+                            <li>Database Design (Relational, ER Models)</li>
+                            <li>Problem Solving</li>
+                            <li>Teamwork & Collaboration</li>
+                            <li>Communication</li>
+                            <li>Time Management</li>
+                            <li>Adaptability</li>
+                            <li>Project Management (Exposure)</li>
+                            <li>Peer Support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="content-section">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <p>I'm actively seeking internship or full-time opportunities where I can contribute my skills and continue to learn. Feel free to reach out if you'd like to discuss my experience or potential collaborations!</p>
+                <div class="contact-links">
+                     <!-- Update Email -->
+                     <a href="mailto:anitakraus44@outlook.com" class="btn btn-primary">Email Me</a> 
+                     <!-- Add LinkedIn URL -->
+                     <a href="https://www.linkedin.com/in/anita-kraus-586323359/" target="_blank" class="btn btn-secondary">LinkedIn</a> 
+                     <!-- Add GitHub URL -->
+                     <a href="https://github.com/NeedaK]" target="_blank" class="btn btn-secondary">GitHub</a> 
+                     <!-- Optional: Link to your resume PDF -->
+                     <a href="Updated Resume 1-7-25.pdf" target="_blank" class="btn btn-secondary">Resume (PDF)</a> 
+                </div>
+                 <!-- Optional: Simple Contact Form (Requires backend or service like Formspree/Netlify Forms) -->
+                 <!-- Keep commented out unless you set up a backend service -->
+                 <!--
+                 <form action="[Your Formspree endpoint or backend script]" method="POST" class="contact-form">
+                     ... form fields ...
+                 </form>
+                 -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <!-- Update Name/Initials -->
+            <p>© <span id="current-year"></span> Anita Kraus. All rights reserved.</p> 
+        </div>
+    </footer>
+
+    <!-- Link the renamed JS file -->
+    <script src="script.js"></script> 
+</body>
+</html>
