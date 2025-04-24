@@ -222,19 +222,62 @@ img {
     margin: 0.5rem auto 0;
 }
 
-
-/* Project Section */
-/* --- MODIFICATION START --- */
-.project-grid {
-    /* Remove grid display */
-    /* display: grid; */
-    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
-    /* gap: 2rem; */
-    
-    /* Allow project cards to stack naturally */
-    display: block; /* Or remove the display property entirely */
+/* NEW: Personal Growth Section Specific Styles (Optional) */
+#personal-growth h3 {
+    color: #007bff; /* Example: Make subheadings blue */
+    margin-top: 1.5rem; /* Add space above subheadings */
+    margin-bottom: 0.75rem;
 }
 
+#personal-growth h3:first-of-type {
+    margin-top: 0; /* Remove top margin for the very first subheading */
+}
+
+.growth-content p {
+    margin-bottom: 1rem;
+}
+
+/* Experience Section */
+.experience-item {
+    background: #fff; /* White background for items if section is colored */
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-left: 5px solid #6c757d; /* Grey accent line */
+    border-radius: 0 5px 5px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.experience-item h3 {
+    margin-bottom: 0.25rem;
+}
+.experience-item p strong {
+    display: block; /* Put company/dates on new line */
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+.experience-item ul {
+    padding-left: 20px; /* Indent bullet points */
+    list-style: disc;
+}
+.experience-item li {
+    margin-bottom: 0.5rem;
+}
+
+
+/* Project Section */
+.project-grid {
+    /* Allow project cards to stack naturally */
+    display: block;
+}
+
+/* --- REMOVED SPLIT LAYOUT STYLES --- */
+/* .project-card-split { ... } */
+/* .project-card-split .project-card-content { ... } */
+/* .project-card-split .project-thumb { ... } */
+/* --- REMOVED SPLIT LAYOUT MEDIA QUERY --- */
+/* @media (max-width: 768px) { .project-card-split { ... } ... } */
+
+/* Default Project Card Styles */
 .project-card {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -242,43 +285,31 @@ img {
     padding: 1.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column; 
-    justify-content: space-between; 
-    
-    /* Add margin between stacked cards */
-    margin-bottom: 2rem; /* Adjust spacing as needed */
-    width: 100%; /* Ensure it takes full width */
+    display: flex; /* Keep flex for column layout */
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    width: 100%;
 }
-/* Remove hover effect if it feels weird when they are full width */
-/* .project-card:hover { */
-/*    transform: translateY(-5px); */
-/*    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); */
-/* } */
-/* --- MODIFICATION END --- */
 
 .project-card h3 {
     margin-bottom: 0.75rem;
+    text-align: center; /* Center heading */
 }
 
 .project-card p {
-    flex-grow: 1; /* Allow description to take available space */
+    flex-grow: 1;
     margin-bottom: 1rem;
 }
 
+/* Default Project Thumbnail Styles (handles centering) */
 .project-thumb {
-    /* --- Size Control --- */
-    max-width: 60%; /* Make image take up max 60% of the card width */
-                    /* Adjust this percentage (e.g., 50%, 75%) as needed */
-    height: auto;   /* Maintain aspect ratio */
-    
-    /* --- Centering --- */
-    display: block; /* Necessary for margin auto centering */
-    margin-left: auto;
-    margin-right: auto;
-
-    /* --- Keep Existing Styles --- */
-    margin-bottom: 1rem; 
+    max-width: 60%; /* Adjust default size as needed */
+    height: auto;
+    display: block;
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+    margin-bottom: 1rem;
     border-radius: 4px;
     border: 1px solid #eee;
 }
@@ -286,6 +317,7 @@ img {
 .project-links {
     margin-bottom: 0.75rem;
     margin-top: auto; /* Push links down */
+    text-align: center; /* Center buttons */
 }
 
 .tech-stack {
@@ -293,16 +325,17 @@ img {
     color: #6c757d;
     font-family: 'Source Code Pro', monospace;
     margin-top: 0.5rem;
-    margin-bottom: 0; /* Remove bottom margin */
+    margin-bottom: 0;
+    text-align: center; /* Center tech stack */
 }
+
 
 /* Skills Section */
 .skills-grid {
-    display: flex;          /* Use Flexbox */
-    flex-wrap: wrap;        /* Allow items to wrap to the next line */
-    justify-content: center; /* Center items horizontally on each line */
-    gap: 2rem;              /* Spacing between items (replaces grid-gap) */
-    /* Remove grid-template-columns if it exists */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .skill-category {
@@ -310,21 +343,11 @@ img {
     padding: 1.5rem;
     border-radius: 8px;
     border-left: 5px solid #007bff;
-
-    /* --- Flex Item Sizing --- */
-    flex-grow: 1;           /* Allow items to grow to fill available space */
-    flex-basis: 220px;      /* Set a base width - adjust this value (~200-250px) 
-                                based on how many items you roughly want per row 
-                                before wrapping */
-    /* Optional: Add a max-width if you don't want skill cards
-       to become excessively wide on rows with only 1 or 2 items */
-    /* max-width: 350px; */ 
-
-    /* Ensure other styles like text alignment are as desired */
-    /* text-align: left; /* Typically default */
+    flex-grow: 1;
+    flex-basis: 220px;
+    /* max-width: 350px; */
 }
 
-/* Keep other styles for .skill-category h3, ul, li etc. */
 .skill-category h3 {
     margin-bottom: 1rem;
     color: #1a2a4a;
@@ -342,9 +365,42 @@ img {
     color: #444;
 }
 
-/* --- Ensure the rest of your style.css remains the same --- */
+/* Default Project Thumbnail Styles (handles centering) */
+.project-thumb {
+    max-width: 60%; /* Default size */
+    height: auto;
+    display: block;
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
 
-/* ... (rest of your CSS rules for other sections, footer, responsive, etc.) ... */
+/* NEW STYLE for smaller project thumbnails */
+.project-thumb-small {
+    max-width: 40%; /* Make these specific images smaller */
+    /* Centering and other styles are inherited from .project-thumb */
+}
+
+/* ... rest of your CSS ... */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* ... other responsive styles ... */
+
+    .project-thumb {
+        max-width: 80%; /* Default large size on mobile */
+    }
+
+    /* Optional: If you want the small thumbs to ALSO be smaller on mobile */
+    /* Uncomment the rule below and adjust percentage */
+    /*
+    .project-thumb-small {
+        max-width: 60%;
+    }
+    */
+}
 
 /* Contact Section */
 #contact p {
@@ -360,54 +416,13 @@ img {
     margin-bottom: 2rem;
 }
 
-.contact-form {
-    max-width: 600px;
-    margin: 2rem auto 0;
-    background: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.form-group {
-    margin-bottom: 1rem;
-}
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    color: #333;
-}
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-.form-group textarea {
-    resize: vertical; /* Allow vertical resize only */
-}
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-.contact-form button[type="submit"] {
-    display: block;
-    width: 100%;
-    margin-top: 1rem;
-}
-
-
 /* Footer */
 footer {
-    background-color: #1a2a4a; /* Dark blue */
+    background-color: #1a2a4a;
     color: #ccc;
     text-align: center;
     padding: 1.5rem 0;
-    margin-top: 3rem; /* Space above footer */
+    margin-top: 3rem;
     font-size: 0.9rem;
 }
 
@@ -422,53 +437,52 @@ footer p {
     h2 { font-size: 1.8rem; }
 
     .navbar .container {
-        flex-direction: row; /* Keep brand and hamburger side-by-side */
+        flex-direction: row;
     }
 
     .nav-menu {
         position: fixed;
-        left: -100%; /* Start hidden */
-        top: 70px; /* Below header */
+        left: -100%;
+        top: 70px;
         flex-direction: column;
         background-color: #fff;
         width: 100%;
         text-align: center;
-        transition: left 0.3s ease; /* Slide-in animation */
+        transition: left 0.3s ease;
         box-shadow: 0 5px 5px rgba(0,0,0,0.1);
         gap: 0;
     }
 
     .nav-menu.active {
-        left: 0; /* Slide in when active */
+        left: 0;
     }
 
     .nav-item {
         margin: 0;
-        border-bottom: 1px solid #eee; /* Separator lines */
+        border-bottom: 1px solid #eee;
     }
 
     .nav-link {
-        display: block; /* Make links full width */
+        display: block;
         padding: 1.2rem 1rem;
         width: 100%;
     }
-     .nav-link:hover::after { /* Remove underline effect on mobile links */
+     .nav-link:hover::after {
         width: 0;
      }
 
-
     .hamburger {
-        display: block; /* Show hamburger on mobile */
+        display: block;
     }
 
     .hamburger.active .bar:nth-child(2) {
-        opacity: 0; /* Hide middle bar for X */
+        opacity: 0;
     }
     .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg); /* Top bar rotates */
+        transform: translateY(8px) rotate(45deg);
     }
     .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg); /* Bottom bar rotates */
+        transform: translateY(-8px) rotate(-45deg);
     }
 
     .hero-section {
@@ -476,12 +490,12 @@ footer p {
         min-height: 50vh;
     }
 
-    /* Project grid already stacks due to the main change, no extra media query needed here */
-    /* .project-grid { */
-    /*    grid-template-columns: 1fr; */ /* Stack projects on smaller screens */
-    /* } */
-
     .skills-grid {
-        grid-template-columns: 1fr; /* Stack skills on smaller screens */
+        /* Changed from grid to flex, so adjust basis/wrap if needed */
+        /* grid-template-columns: 1fr; */ /* No longer needed */
+    }
+
+    .project-thumb {
+        max-width: 80%; /* Allow image to be larger on small screens */
     }
 }
